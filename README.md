@@ -23,17 +23,18 @@ SISTEMA DE INFORMACION BASICO
 
 # 3. Configura el archivo config/db.js
    
-```bash
+   ```bash
     host=localhost
     user=tu_usuario
     password=tu_contraseña
     database=nombre_de_tu_base_de_datos
-```
-# 4. Uso
-    Inicia el servidor:
-    ```bash
-    npm start
-    ```
+   ```
+
+# 4. Inicia el servidor:
+
+   ```bash
+   npm start
+   ```
 # 5. Abre tu navegador y ve a http://localhost:3000.
     
    ## Contribuciones
