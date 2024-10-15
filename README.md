@@ -21,13 +21,13 @@ SISTEMA DE INFORMACION BASICO
    npm install
    ```
 
-# 3. Crea un archivo .env en la raíz del proyecto y configura tus variables de entorno:
+# 3. Configura el archivo config/db.js
    
 ```bash
-    DB_HOST=localhost
-    DB_USER=tu_usuario
-    DB_PASS=tu_contraseña
-    DB_NAME=nombre_de_tu_base_de_datos
+    host=localhost
+    user=tu_usuario
+    password=tu_contraseña
+    database=nombre_de_tu_base_de_datos
 ```
 # 4. Uso
     Inicia el servidor:
