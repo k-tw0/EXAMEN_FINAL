@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Mis Datos</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+    <h1>Editar Mis Datos</h1>
+    <form action="/pacientes/edit" method="POST"> <!-- Asegúrate de que esta ruta sea correcta -->
+        <input type="text" name="nombre" value="<%= paciente.nombre %>" required placeholder="Nombre">
+        <input type="text" name="apellido" value="<%= paciente.apellido %>" required placeholder="Apellido">
+        <input type="text" name="direccion" value="<%= paciente.direccion %>" required placeholder="Dirección">
+        <input type="text" name="telefono" value="<%= paciente.telefono %>" required placeholder="Teléfono">
+        <input type="email" name="email" value="<%= paciente.email %>" required placeholder="Email">
+        
+        <!-- Campo para la historia clínica -->
+        <textarea name="historia_clinica" placeholder="Historia Clínica"><%= paciente.historia_clinica %></textarea>
+
+        <button type="submit">Actualizar Mis Datos</button>
+    </form>
+</body>
+</html>

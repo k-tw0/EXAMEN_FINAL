@@ -1,0 +1,58 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Estilo para listas */
+ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0;
+}
+
+li {
+    background: #e2e2e2;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Estilo para tablas */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Elimina los espacios entre las celdas */
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Línea de separación entre filas */
+}
+
+th {
+    background-color: #4CAF50; /* Color de fondo para los encabezados */
+    color: white; /* Color del texto en el encabezado */
+}
+
+/* Estilo para botones */
+button {
+    background-color: #008CBA; /* Color del botón */
+    color: white; /* Color del texto del botón */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+button:hover {
+    background-color: #005f73; /* Color del botón al pasar el ratón por encima */
+}
+
+a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+}

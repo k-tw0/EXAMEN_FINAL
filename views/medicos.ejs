@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Médicos</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+    <h1>Lista de Médicos</h1>
+
+    <!-- Mostrar médicos -->
+    <h2>Médicos:</h2>
+    <ul>
+        <% medicos.forEach(medico => { %>
+            <li><%= medico.nombre %> <%= medico.apellido %></li>
+        <% }); %>
+    </ul>
+
+    <!-- Botón para acceder a la página de consultas -->
+    <h2>Acciones:</h2>
+    <a href="/medicos/consultas">
+        <button type="button">Ver Consultas</button>
+    </a>
+
+    <!-- Mostrar pacientes -->
+    <h2>Lista de Pacientes:</h2>
+
+    <!-- Tabla de pacientes -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Dirección</th>
+                <th>Teléfono</th>
+                <th>Email</th>
+                <th>Historia Clínica</th> <!-- Nueva columna para la historia clínica -->
+                <th>Acciones</th>
+            </tr>
+        </thead>
+
+        <!-- Filas de pacientes -->
+        <tbody>
+            <% pacientes.forEach(paciente => { %> 
+                <tr> 
+                    <td><%= paciente.nombre %></td> 
+                    <td><%= paciente.apellido %></td> 
+                    <td><%= paciente.direccion %></td> 
+                    <td><%= paciente.telefono %></td> 
+                    <td><%= paciente.email %></td> 
+                    <td><%= paciente.historia_clinica || 'No disponible' %></td> <!-- Mostrar historia clínica o un mensaje si no hay -->
+                    <!-- Enlace a la página de edición -->
+                    <td>
+                        <a href="/medicos/edit/<%= paciente.id %>">Editar</a>
+                        <form action="/medicos/delete/<%= paciente.id %>" method="POST" style="display:inline;">
+                            <button type="submit">Eliminar</button>
+                        </form>
+                    </td> 
+                </tr> 
+            <% }); %> 
+        </tbody>
+
+    </table>
+
+</body>
+
+</html>

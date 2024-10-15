@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Consulta</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+    <h1>Crear Nueva Consulta</h1>
+    <form action="/medicos/consultas/create" method="POST">
+        <label for="id_paciente">ID Paciente:</label>
+        <input type="text" name="id_paciente" required placeholder="ID del Paciente"><br>
+
+        <label for="id_medico">ID Médico:</label>
+        <input type="text" name="id_medico" required placeholder="ID del Médico"><br>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" name="fecha" required><br>
+
+        <label for="especialidad">Especialidad:</label>
+        <input type="text" name="especialidad" required placeholder="Especialidad"><br>
+
+        <button type="submit">Crear Consulta</button>
+    </form>
+</body>
+</html>

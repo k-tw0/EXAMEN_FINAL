@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar Sesión</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Altura completa de la ventana */
+            background-color: #000; /* Fondo negro */
+            font-family: Arial, sans-serif; /* Fuente Arial */
+            color: #fff; /* Color del texto blanco */
+        }
+
+        .card {
+            background-color: #1a1a1a; /* Fondo oscuro para la tarjeta */
+            border-radius: 15px; /* Bordes redondeados */
+            padding: 20px; /* Espaciado interno */
+            box-shadow: 0 4px 20px rgba(0, 204, 255, 0.5); /* Sombra celeste */
+            text-align: center; /* Centrar texto */
+            width: 300px; /* Ancho de la tarjeta */
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%; /* Ancho completo */
+            padding: 10px; /* Espaciado interno */
+            margin: 10px 0; /* Margen vertical entre inputs */
+            border-radius: 5px; /* Bordes redondeados en inputs */
+            border: 1px solid #00ccff; /* Borde celeste */
+            background-color: #333; /* Fondo oscuro para inputs */
+            color: #fff; /* Texto blanco en inputs */
+        }
+
+        button {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #00ccff; /* Fondo celeste para el botón */
+            color: #fff; /* Texto blanco en el botón */
+            cursor: pointer; /* Cambiar cursor al pasar por encima */
+        }
+
+        button:hover {
+            background-color: #0099cc; /* Color más oscuro al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Iniciar Sesión</h1>
+        <form action="/auth/login" method="POST">
+            <input type="email" name="email" placeholder="Correo Electrónico" required>
+            <input type="password" name="password" placeholder="Contraseña" required>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Consultas</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+    <h1>Lista de Consultas</h1>
+
+    <!-- Botones para crear y gestionar consultas -->
+    <div>
+        <a href="/medicos/consultas/create">
+            <button type="button">Crear Nueva Consulta</button>
+        </a>
+    </div>
+
+    <!-- Tabla de consultas -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID Consulta</th>
+                <th>Nombre Paciente</th>
+                <th>Apellido Paciente</th>
+                <th>Nombre Médico</th>
+                <th>Apellido Médico</th>
+                <th>Fecha</th>
+                <th>Especialidad</th>
+                <th>Acciones</th> <!-- Nueva columna para acciones -->
+            </tr>
+        </thead>
+
+        <!-- Filas de consultas -->
+        <tbody>
+            <% consultas.forEach(consulta => { %> 
+                <tr> 
+                    <td><%= consulta.id_consulta %></td> 
+                    <td><%= consulta.nombre_paciente %></td> 
+                    <td><%= consulta.apellido_paciente %></td> 
+                    <td><%= consulta.nombre_medico %></td> 
+                    <td><%= consulta.apellido_medico %></td> 
+                    <td><%= consulta.fecha.toISOString().split('T')[0] %></td> <!-- Formato YYYY-MM-DD -->
+                    <td><%= consulta.especialidad %></td> 
+                    <!-- Botones para editar y eliminar -->
+                    <td>
+                        <a href="/medicos/consultas/edit/<%= consulta.id_consulta %>">Editar</a>
+                        <form action="/medicos/consultas/delete/<%= consulta.id_consulta %>" method="POST" style="display:inline;">
+                            <button type="submit">Eliminar</button>
+                        </form>
+                    </td>
+                </tr> 
+            <% }); %> 
+        </tbody>
+
+    </table>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Consulta</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+    <h1>Editar Consulta</h1>
+    <form action="/medicos/consultas/edit/<%= consulta.id_consulta %>" method="POST">
+        <label for="id_paciente">ID Paciente:</label>
+        <input type="text" name="id_paciente" value="<%= consulta.id_paciente %>" required><br>
+
+        <label for="id_medico">ID Médico:</label>
+        <input type="text" name="id_medico" value="<%= consulta.id_medico %>" required><br>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" name="fecha" value="<%= consulta.fecha.toISOString().split('T')[0] %>" required><br>
+
+        <label for="especialidad">Especialidad:</label>
+        <input type="text" name="especialidad" value="<%= consulta.especialidad %>" required><br>
+
+        <button type="submit">Actualizar Consulta</button>
+    </form>
+</body>
+</html>
